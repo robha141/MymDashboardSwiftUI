@@ -23,6 +23,7 @@
 		59B7BBBD259B994000AB1975 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7BBBC259B994000AB1975 /* SwiftUIPager */; };
 		59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */; };
 		59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBC6259BB74200AB1975 /* PageControl.swift */; };
+		59B7BBCB259BBCB500AB1975 /* DashboardTimetableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */; };
 		5A2293B1B13423530AC88CF2 /* Pods_MymDashboardSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenItemsView.swift; sourceTree = "<group>"; };
 		59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentHeight.swift; sourceTree = "<group>"; };
 		59B7BBC6259BB74200AB1975 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventView.swift; sourceTree = "<group>"; };
 		781A7628F35340001D38F8D4 /* Pods-MymDashboardSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MymDashboardSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MymDashboardSwiftUI/Pods-MymDashboardSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MymDashboardSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		59A94351259B2532005207EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				59B7BBC9259BBC9C00AB1975 /* Timetable */,
 				59B7BBB3259B921600AB1975 /* Canteen */,
 				59A94391259B8110005207EA /* Navigation */,
 				59A94382259B3523005207EA /* DashboardView.swift */,
@@ -141,6 +144,14 @@
 				59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */,
 			);
 			path = Canteen;
+			sourceTree = "<group>";
+		};
+		59B7BBC9259BBC9C00AB1975 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */,
+			);
+			path = Timetable;
 			sourceTree = "<group>";
 		};
 		976C3D16C6BE56AF12E681C8 /* Frameworks */ = {
@@ -311,6 +322,7 @@
 				59A94353259B253C005207EA /* DashboardNavigationView.swift in Sources */,
 				59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */,
 				59A942F2259B2463005207EA /* MymDashboardSwiftUIApp.swift in Sources */,
+				59B7BBCB259BBCB500AB1975 /* DashboardTimetableEventView.swift in Sources */,
 				59A9436C259B2843005207EA /* RSwift+SwiftUI.swift in Sources */,
 				59A94387259B79BB005207EA /* DashboardHeaderView.swift in Sources */,
 				59A94369259B27A7005207EA /* R.generated.swift in Sources */,
