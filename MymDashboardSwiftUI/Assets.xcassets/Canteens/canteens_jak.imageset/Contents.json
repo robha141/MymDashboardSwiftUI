@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "canteens_jak.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
