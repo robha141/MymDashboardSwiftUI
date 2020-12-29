@@ -14,6 +14,7 @@ struct DashboardView: View {
                             title: "Today events",
                             showAllButtonAction: {}
                         )
+                        DashboardCanteenItemsView()
                         Spacer()
                     }
                 }

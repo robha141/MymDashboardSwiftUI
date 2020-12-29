@@ -16,10 +16,12 @@ struct DashboardPlaceholderView: View {
                 Text(titleText)
                     .foregroundColor(R.color.basicWhiteBlack.color)
                     .font(.title3)
+                    .fontWeight(.semibold)
                 Spacer()
                 Text(bottomText)
                     .foregroundColor(R.color.basicWhiteBlack.color)
                     .font(.footnote)
+                    .fontWeight(.medium)
             }
             .padding(.kPaddingL)
         }

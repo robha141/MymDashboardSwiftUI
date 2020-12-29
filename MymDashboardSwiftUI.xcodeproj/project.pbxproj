@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,11 @@
 		59A9438A259B7ED0005207EA /* DashboardPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A94389259B7ED0005207EA /* DashboardPlaceholderView.swift */; };
 		59A9438E259B7F3F005207EA /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9438D259B7F3F005207EA /* CGFloat+Constants.swift */; };
 		59A94398259B818D005207EA /* DashboardNavigationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A94397259B818D005207EA /* DashboardNavigationListView.swift */; };
+		59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */; };
+		59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */; };
+		59B7BBBD259B994000AB1975 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7BBBC259B994000AB1975 /* SwiftUIPager */; };
+		59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */; };
+		59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBC6259BB74200AB1975 /* PageControl.swift */; };
 		5A2293B1B13423530AC88CF2 /* Pods_MymDashboardSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,10 @@
 		59A94389259B7ED0005207EA /* DashboardPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPlaceholderView.swift; sourceTree = "<group>"; };
 		59A9438D259B7F3F005207EA /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
 		59A94397259B818D005207EA /* DashboardNavigationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationListView.swift; sourceTree = "<group>"; };
+		59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenView.swift; sourceTree = "<group>"; };
+		59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenItemsView.swift; sourceTree = "<group>"; };
+		59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentHeight.swift; sourceTree = "<group>"; };
+		59B7BBC6259BB74200AB1975 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		781A7628F35340001D38F8D4 /* Pods-MymDashboardSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MymDashboardSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MymDashboardSwiftUI/Pods-MymDashboardSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MymDashboardSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -45,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B7BBBD259B994000AB1975 /* SwiftUIPager in Frameworks */,
 				5A2293B1B13423530AC88CF2 /* Pods_MymDashboardSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +91,7 @@
 				59A942F5259B2466005207EA /* Assets.xcassets */,
 				59A942FA259B2466005207EA /* Info.plist */,
 				59A942F7259B2466005207EA /* Preview Content */,
+				59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */,
 			);
 			path = MymDashboardSwiftUI;
 			sourceTree = "<group>";
@@ -96,10 +107,12 @@
 		59A94351259B2532005207EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				59A94391259B8110005207EA /* NavigationView */,
+				59B7BBB3259B921600AB1975 /* Canteen */,
+				59A94391259B8110005207EA /* Navigation */,
 				59A94382259B3523005207EA /* DashboardView.swift */,
 				59A94386259B79BB005207EA /* DashboardHeaderView.swift */,
 				59A94389259B7ED0005207EA /* DashboardPlaceholderView.swift */,
+				59B7BBC6259BB74200AB1975 /* PageControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,13 +125,22 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		59A94391259B8110005207EA /* NavigationView */ = {
+		59A94391259B8110005207EA /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				59A94352259B253C005207EA /* DashboardNavigationView.swift */,
 				59A94397259B818D005207EA /* DashboardNavigationListView.swift */,
 			);
-			path = NavigationView;
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		59B7BBB3259B921600AB1975 /* Canteen */ = {
+			isa = PBXGroup;
+			children = (
+				59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */,
+				59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */,
+			);
+			path = Canteen;
 			sourceTree = "<group>";
 		};
 		976C3D16C6BE56AF12E681C8 /* Frameworks */ = {
@@ -157,6 +179,9 @@
 			dependencies = (
 			);
 			name = MymDashboardSwiftUI;
+			packageProductDependencies = (
+				59B7BBBC259B994000AB1975 /* SwiftUIPager */,
+			);
 			productName = MymDashboardSwiftUI;
 			productReference = 59A942EE259B2463005207EA /* MymDashboardSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 59A942E5259B2463005207EA;
+			packageReferences = (
+				59B7BBBB259B994000AB1975 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+			);
 			productRefGroup = 59A942EF259B2463005207EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,9 +303,13 @@
 			files = (
 				59A94383259B3523005207EA /* DashboardView.swift in Sources */,
 				59A9438A259B7ED0005207EA /* DashboardPlaceholderView.swift in Sources */,
+				59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */,
+				59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */,
 				59A94398259B818D005207EA /* DashboardNavigationListView.swift in Sources */,
 				59A9438E259B7F3F005207EA /* CGFloat+Constants.swift in Sources */,
+				59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */,
 				59A94353259B253C005207EA /* DashboardNavigationView.swift in Sources */,
+				59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */,
 				59A942F2259B2463005207EA /* MymDashboardSwiftUIApp.swift in Sources */,
 				59A9436C259B2843005207EA /* RSwift+SwiftUI.swift in Sources */,
 				59A94387259B79BB005207EA /* DashboardHeaderView.swift in Sources */,
@@ -470,6 +502,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		59B7BBBB259B994000AB1975 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59B7BBBC259B994000AB1975 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59B7BBBB259B994000AB1975 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59A942E6259B2463005207EA /* Project object */;
 }

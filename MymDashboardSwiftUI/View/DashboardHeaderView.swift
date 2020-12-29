@@ -8,9 +8,10 @@ struct DashboardHeaderView: View {
     var body: some View {
         HStack {
             Text(title)
-                .lineLimit(1)
-                .font(.body)
                 .foregroundColor(R.color.heading.color)
+                .font(.body)
+                .fontWeight(.medium)
+                .lineLimit(1)
             Spacer()
             Button(
                 action: showAllButtonAction,
