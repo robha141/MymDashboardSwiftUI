@@ -9,39 +9,19 @@ struct DashboardTimetableEventView: View {
     let eventProgress: Double
     let eventIcon: ImageResource
     
+    // MARK: - View
+    
     var body: some View {
         VStack {
-            VStack {
-                HStack(alignment: .top) {
-                    Text(eventName)
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundColor(R.color.cardTitle.color)
-                        .lineLimit(3)
-                    Spacer()
-                    eventIcon.image
-                        .foregroundColor(R.color.roundedIconPrimaryTint.color)
-                        .frame(width: 36, height: 36)
-                        .background(R.color.roundedIconPrimaryBcg.color)
-                        .cornerRadius(18)
-                }
-                Spacer()
-                HStack {
-                    Text(eventPlaceName)
-                        .font(.subheadline)
-                        .foregroundColor(R.color.cardSubtitle.color)
-                    Spacer()
-                    Text(eventTime)
-                        .font(.subheadline)
-                        .foregroundColor(R.color.cardSubtitle.color)
-                }
-            }
-            .padding(.kPaddingS)
+            creteContentView()
             ProgressView(value: 0.5, total: 1)
                 .accentColor(R.color.primary.color)
                 .scaleEffect(x: 1, y: 2, anchor: .center)
         }
-        .frame(height: Self.calculatedContentHeight)
+        .frame(
+            width: Self.calculatedContentWidth,
+            height: Self.calculatedContentHeight
+        )
         .background(R.color.roundedCell.color)
         .cornerRadius(11)
         .shadow(
@@ -49,11 +29,45 @@ struct DashboardTimetableEventView: View {
             radius: 5
         )
     }
+    
+    private func creteContentView() -> some View {
+        VStack {
+            HStack(alignment: .top) {
+                Text(eventName)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundColor(R.color.cardTitle.color)
+                    .lineLimit(3)
+                Spacer()
+                eventIcon.image
+                    .foregroundColor(R.color.roundedIconPrimaryTint.color)
+                    .frame(width: 36, height: 36)
+                    .background(R.color.roundedIconPrimaryBcg.color)
+                    .cornerRadius(18)
+            }
+            Spacer()
+            HStack {
+                Text(eventPlaceName)
+                    .font(.subheadline)
+                    .foregroundColor(R.color.cardSubtitle.color)
+                Spacer()
+                Text(eventTime)
+                    .font(.subheadline)
+                    .foregroundColor(R.color.cardSubtitle.color)
+            }
+        }
+        .padding(.kPaddingS)
+    }
 }
 
 extension DashboardTimetableEventView: HasCalculatedContentHeight {
     
-    static var calculatedContentHeight: CGFloat { 150 }
+    static var calculatedContentHeight: CGFloat { 140 }
+}
+
+extension DashboardTimetableEventView: HasCalculatedContentWidth {
+    
+    static var calculatedContentWidth: CGFloat { 285 }
 }
 
 struct DashboardTimetableEventView_Previews: PreviewProvider {
@@ -66,7 +80,7 @@ struct DashboardTimetableEventView_Previews: PreviewProvider {
             eventIcon: R.image.timetable_other24px
         )
         .frame(height: 400)
-        .padding()
+        .padding(20)
         .background(R.color.appBackground.color)
     }
 }
