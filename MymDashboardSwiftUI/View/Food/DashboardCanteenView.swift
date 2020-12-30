@@ -39,11 +39,7 @@ struct DashboardCanteenView: View {
             .padding(.kPaddingL)
         }
         .frame(height: Self.calculatedContentHeight)
-        .cornerRadius(.kCornerRadius)
-        .shadow(
-            color: Color.black.opacity(0.1),
-            radius: 5
-        )
+        .cardStyle(padding: 0, hasShadow: true)
     }
 }
 

@@ -21,6 +21,10 @@
 		59ABC7F4259C67E8005070A0 /* HasCalculatedContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC7F3259C67E8005070A0 /* HasCalculatedContentWidth.swift */; };
 		59ABC7FB259C69BE005070A0 /* DashboardTimetableEventItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC7FA259C69BE005070A0 /* DashboardTimetableEventItemsView.swift */; };
 		59ABC804259C70E4005070A0 /* DashboardTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC803259C70E4005070A0 /* DashboardTaskView.swift */; };
+		59ABC808259C7C80005070A0 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC807259C7C80005070A0 /* CardViewModifier.swift */; };
+		59ABC814259C8BC2005070A0 /* DashboardFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC813259C8BC2005070A0 /* DashboardFoodView.swift */; };
+		59ABC81B259C8D3C005070A0 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC81A259C8D3C005070A0 /* View+Extension.swift */; };
+		59ABC820259C9785005070A0 /* FoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC81F259C9785005070A0 /* FoodRating.swift */; };
 		59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */; };
 		59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */; };
 		59B7BBBD259B994000AB1975 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7BBBC259B994000AB1975 /* SwiftUIPager */; };
@@ -48,6 +52,10 @@
 		59ABC7F3259C67E8005070A0 /* HasCalculatedContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentWidth.swift; sourceTree = "<group>"; };
 		59ABC7FA259C69BE005070A0 /* DashboardTimetableEventItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventItemsView.swift; sourceTree = "<group>"; };
 		59ABC803259C70E4005070A0 /* DashboardTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTaskView.swift; sourceTree = "<group>"; };
+		59ABC807259C7C80005070A0 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
+		59ABC813259C8BC2005070A0 /* DashboardFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFoodView.swift; sourceTree = "<group>"; };
+		59ABC81A259C8D3C005070A0 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		59ABC81F259C9785005070A0 /* FoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRating.swift; sourceTree = "<group>"; };
 		59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenView.swift; sourceTree = "<group>"; };
 		59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenItemsView.swift; sourceTree = "<group>"; };
 		59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentHeight.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 		59A942F0259B2463005207EA /* MymDashboardSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				59ABC81E259C977B005070A0 /* Model */,
 				59A9438C259B7F15005207EA /* Constants */,
 				59A94351259B2532005207EA /* View */,
 				59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */,
@@ -116,14 +125,14 @@
 		59A94351259B2532005207EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				59ABC806259C7C69005070A0 /* Common */,
 				59ABC7FD259C6B63005070A0 /* Tasks */,
 				59B7BBC9259BBC9C00AB1975 /* Timetable */,
-				59B7BBB3259B921600AB1975 /* Canteen */,
+				59B7BBB3259B921600AB1975 /* Food */,
 				59A94391259B8110005207EA /* Navigation */,
 				59A94382259B3523005207EA /* DashboardView.swift */,
 				59A94386259B79BB005207EA /* DashboardHeaderView.swift */,
 				59A94389259B7ED0005207EA /* DashboardPlaceholderView.swift */,
-				59B7BBC6259BB74200AB1975 /* PageControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,13 +162,32 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
-		59B7BBB3259B921600AB1975 /* Canteen */ = {
+		59ABC806259C7C69005070A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				59B7BBC6259BB74200AB1975 /* PageControl.swift */,
+				59ABC807259C7C80005070A0 /* CardViewModifier.swift */,
+				59ABC81A259C8D3C005070A0 /* View+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		59ABC81E259C977B005070A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59ABC81F259C9785005070A0 /* FoodRating.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59B7BBB3259B921600AB1975 /* Food */ = {
 			isa = PBXGroup;
 			children = (
 				59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */,
 				59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */,
+				59ABC813259C8BC2005070A0 /* DashboardFoodView.swift */,
 			);
-			path = Canteen;
+			path = Food;
 			sourceTree = "<group>";
 		};
 		59B7BBC9259BBC9C00AB1975 /* Timetable */ = {
@@ -332,8 +360,11 @@
 				59A94383259B3523005207EA /* DashboardView.swift in Sources */,
 				59A9438A259B7ED0005207EA /* DashboardPlaceholderView.swift in Sources */,
 				59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */,
+				59ABC808259C7C80005070A0 /* CardViewModifier.swift in Sources */,
 				59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */,
+				59ABC814259C8BC2005070A0 /* DashboardFoodView.swift in Sources */,
 				59A94398259B818D005207EA /* DashboardNavigationListView.swift in Sources */,
+				59ABC820259C9785005070A0 /* FoodRating.swift in Sources */,
 				59A9438E259B7F3F005207EA /* CGFloat+Constants.swift in Sources */,
 				59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */,
 				59A94353259B253C005207EA /* DashboardNavigationView.swift in Sources */,
@@ -345,6 +376,7 @@
 				59A9436C259B2843005207EA /* RSwift+SwiftUI.swift in Sources */,
 				59A94387259B79BB005207EA /* DashboardHeaderView.swift in Sources */,
 				59A94369259B27A7005207EA /* R.generated.swift in Sources */,
+				59ABC81B259C8D3C005070A0 /* View+Extension.swift in Sources */,
 				59ABC7FB259C69BE005070A0 /* DashboardTimetableEventItemsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

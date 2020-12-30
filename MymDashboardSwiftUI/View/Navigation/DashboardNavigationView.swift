@@ -9,11 +9,11 @@ struct DashboardNavigationView: View {
     var body: some View {
         VStack {
             icon.image
-                .frame(width: 60, height: 60)
+                .frame(size: 60)
                 .foregroundColor(R.color.roundedIconPrimaryTint.color)
                 .background(R.color.roundedIconPrimaryBcg.color)
-                .cornerRadius(30)
-                .shadow(radius: 5)
+                .clipShape(Circle())
+                .cardShadow()
             Text(text)
                 .foregroundColor(R.color.collectionViewCellTitle.color)
                 .font(.footnote)

@@ -32,11 +32,7 @@ struct PageControl: View {
                     : unselectedColor
                 Circle()
                     .foregroundColor(foregroundColor)
-                    .frame(
-                        width: indicatorSize,
-                        height: indicatorSize,
-                        alignment: .center
-                    )
+                    .frame(size: indicatorSize)
             }
         }
     }

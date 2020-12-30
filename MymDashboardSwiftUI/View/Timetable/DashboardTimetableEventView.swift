@@ -22,12 +22,7 @@ struct DashboardTimetableEventView: View {
             width: Self.calculatedContentWidth,
             height: Self.calculatedContentHeight
         )
-        .background(R.color.roundedCell.color)
-        .cornerRadius(11)
-        .shadow(
-            color: R.color.cardShadow.color.opacity(0.1),
-            radius: 5
-        )
+        .cardStyle(padding: 0, hasShadow: true)
     }
     
     private func creteContentView() -> some View {
@@ -41,9 +36,9 @@ struct DashboardTimetableEventView: View {
                 Spacer()
                 eventIcon.image
                     .foregroundColor(R.color.roundedIconPrimaryTint.color)
-                    .frame(width: 36, height: 36)
+                    .frame(size: .kCardLeadingIconSize)
                     .background(R.color.roundedIconPrimaryBcg.color)
-                    .cornerRadius(18)
+                    .clipShape(Circle())
             }
             Spacer()
             HStack {
