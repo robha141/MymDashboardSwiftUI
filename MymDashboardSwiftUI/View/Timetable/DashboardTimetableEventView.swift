@@ -12,7 +12,7 @@ struct DashboardTimetableEventView: View {
     var body: some View {
         VStack {
             creteContentView()
-            ProgressView(value: 0.5, total: 1)
+            ProgressView(value: eventProgress, total: 1)
                 .accentColor(R.color.primary.color)
                 .scaleEffect(x: 1, y: 2, anchor: .center)
         }
