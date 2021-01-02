@@ -1,7 +1,10 @@
 import Foundation
+import Combine
 
-final class DashboardCanteensRowViewModel: DashboardRowViewModel {
+final class DashboardCanteensRowViewModel: DashboardRowViewModel, ObservableObject {
     
+    @Published
+    var selectedCanteenIndex: Int = 0
     var id = UUID().uuidString
     var canteens: [DashboardFoodCanteenViewModel]
     var onCanteenChange: (DashboardFoodCanteenViewModel) -> Void
@@ -12,7 +15,14 @@ final class DashboardCanteensRowViewModel: DashboardRowViewModel {
             .map { _ in DashboardFoodCanteenViewModel.generateRandomCanteen() }
     }
     
-    func selectedCanteenChange(newIndex: Int) {
-        onCanteenChange(canteens[newIndex])
+    func selectedCanteenChange() {
+        onCanteenChange(canteens[selectedCanteenIndex])
+    }
+    
+    func generateRandomFoodsInCanteens() {
+        for (index, _) in canteens.enumerated() {
+            canteens[index].generateRandomFoods()
+        }
+        onCanteenChange(canteens[selectedCanteenIndex])
     }
 }

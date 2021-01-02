@@ -13,7 +13,7 @@ struct DashboardTimetableEventsRowView: View {
                     content: { DashboardTimetableEventView(viewModel: $0) }
                 )
             }
-            .padding(EdgeInsets(top: 0, leading: .kPaddingL, bottom: 0, trailing: .kPaddingL))
+            .padding(.kListItemInsets)
         }
     }
 }

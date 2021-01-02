@@ -5,16 +5,22 @@ final class DashboardFoodSectionViewModel: DashboardSectionViewModel {
     
     init() {
         super.init(sectionName: "Food menu")
-        let canteens = DashboardCanteensRowViewModel { [weak self] canteen in
-            self?.items.removeAll(where: { ($0 as? DashboardFoodRowViewModel) != nil })
-            self?.items.append(contentsOf: canteen.foods)
+        let canteens = DashboardCanteensRowViewModel { [weak self] in
+            self?.updateFoodItems(with: $0)
         }
         items = [canteens]
-        canteens.selectedCanteenChange(newIndex: 0)
+        canteens.selectedCanteenChange()
     }
     
-    private func generateFoods() {
-        items.removeSubrange(1 ..< items.count)
-        items.append(contentsOf: (0 ..< Int.random(in: 1 ... 10)).map { _ in DashboardFoodRowViewModel.generateRandomFood() })
+    func generateRandomFoodsInCanteens() {
+        guard let canteens = items[0] as? DashboardCanteensRowViewModel else {
+            return
+        }
+        canteens.generateRandomFoodsInCanteens()
+    }
+    
+    func updateFoodItems(with canteen: DashboardFoodCanteenViewModel) {
+        items.removeAll(where: { ($0 as? DashboardFoodRowViewModel) != nil })
+        items.append(contentsOf: canteen.foods)
     }
 }

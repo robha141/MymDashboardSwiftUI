@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DashboardNavigationListView: View {
+struct DashboardNavigationItemsRowView: View {
     
     let viewModel: DashboardNavigationItemsRowViewModel
     
@@ -16,7 +16,7 @@ struct DashboardNavigationListView: View {
                     }
                 )
             }
-            .padding(EdgeInsets(top: 0, leading: .kPaddingL, bottom: 0, trailing: .kPaddingL))
+            .padding(EdgeInsets(top: 20, leading: .kPaddingL, bottom: 0, trailing: .kPaddingL))
         }
     }
 }
@@ -24,7 +24,7 @@ struct DashboardNavigationListView: View {
 struct DashboardNavigationListView_Previews: PreviewProvider {
     
     static var previews: some View {
-        DashboardNavigationListView(viewModel: DashboardNavigationItemsRowViewModel())
+        DashboardNavigationItemsRowView(viewModel: DashboardNavigationItemsRowViewModel())
             .background(R.color.appBackground.color)
             .environment(\.colorScheme, .dark)
     }

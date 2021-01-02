@@ -19,28 +19,25 @@ struct DashboardSectionView: View {
                 content: { viewModel in
                     switch viewModel {
                     case let viewModel as DashboardNavigationItemsRowViewModel:
-                        DashboardNavigationListView(viewModel: viewModel)
+                        DashboardNavigationItemsRowView(viewModel: viewModel)
                     case let viewModel as DashboardTimetableEventsRowViewModel:
                         DashboardTimetableEventsRowView(viewModel: viewModel)
-                            .transition(.rowTransition)
                     case let viewModel as DashboardCanteensRowViewModel:
-                        DashboardCanteenItemsView(viewModel: viewModel)
+                        DashboardCanteensRowView(viewModel: viewModel)
                     case let viewModel as DashboardFoodRowViewModel:
                         DashboardFoodView(viewModel: viewModel)
                             .padding(.kListItemInsets)
-                            .transition(.rowTransition)
                     case let viewModel as DashboardTaskRowViewModel:
                         DashboardTaskView(viewModel: viewModel)
                             .padding(.kListItemInsets)
-                            .transition(.rowTransition)
                     case let item as DashboardPlaceholderItem:
                         DashboardPlaceholderView(from: item)
-                            .transition(.rowTransition)
                     default:
                         EmptyView()
                     }
                 }
             )
+            .transition(.rowTransition)
         }
     }
 }

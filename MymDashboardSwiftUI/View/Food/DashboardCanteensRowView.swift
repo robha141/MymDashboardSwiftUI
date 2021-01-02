@@ -1,17 +1,16 @@
 import SwiftUI
 import SwiftUIPager
 
-struct DashboardCanteenItemsView: View {
-    
-    @State
-    private var selectedIndex = 0
-    let viewModel: DashboardCanteensRowViewModel
+struct DashboardCanteensRowView: View {
+
+    @StateObject
+    var viewModel: DashboardCanteensRowViewModel
     
     var body: some View {
         let contentHeight = DashboardCanteenView.calculatedContentHeight
         return VStack {
             Pager(
-                page: $selectedIndex,
+                page: $viewModel.selectedCanteenIndex,
                 data: viewModel.canteens,
                 content: {
                     DashboardCanteenView(viewModel: $0)
@@ -27,7 +26,7 @@ struct DashboardCanteenItemsView: View {
             )
             .onPageChanged({ index in
                 withAnimation {
-                    self.viewModel.selectedCanteenChange(newIndex: selectedIndex)
+                    self.viewModel.selectedCanteenChange()
                 }
             })
             .preferredItemSize(
@@ -39,10 +38,10 @@ struct DashboardCanteenItemsView: View {
             )
             .frame(height: contentHeight)
             PageControl(
-                selectedIndex: $selectedIndex,
+                selectedIndex: $viewModel.selectedCanteenIndex,
                 numberOfItems: viewModel.canteens.count
             )
-            .padding(EdgeInsets(top: .kPaddingS, leading: 0, bottom: .kPaddingS, trailing: 0))
+            .padding(EdgeInsets(vertical: .kPaddingS))
         }
     }
 }
@@ -50,6 +49,6 @@ struct DashboardCanteenItemsView: View {
 struct DashboardCanteenItemsView_Previews: PreviewProvider {
     
     static var previews: some View {
-        DashboardCanteenItemsView(viewModel: DashboardCanteensRowViewModel(onCanteenChange: { _ in }))
+        DashboardCanteensRowView(viewModel: DashboardCanteensRowViewModel(onCanteenChange: { _ in }))
     }
 }

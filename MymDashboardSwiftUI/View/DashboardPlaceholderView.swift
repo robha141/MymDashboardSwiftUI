@@ -28,7 +28,7 @@ struct DashboardPlaceholderView: View {
         .frame(height: 260)
         .background(R.color.roundedCell.color)
         .cornerRadius(.kCornerRadius)
-        .padding(EdgeInsets(top: 0, leading: .kPaddingL, bottom: 0, trailing: .kPaddingL))
+        .padding(.kListItemInsets)
     }
 }
 
