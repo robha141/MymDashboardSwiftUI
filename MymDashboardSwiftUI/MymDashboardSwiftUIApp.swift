@@ -1,7 +1,5 @@
 import SwiftUI
 
-#warning("TODO: - card view modifier")
-
 @main
 struct MymDashboardSwiftUIApp: App {
     

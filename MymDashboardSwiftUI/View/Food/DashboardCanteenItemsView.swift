@@ -1,25 +1,10 @@
 import SwiftUI
 import SwiftUIPager
 
-struct Canteen: Identifiable, Equatable {
-    
-    var id: Int
-    
-    static func == (lhs: Canteen, rhs: Canteen) -> Bool {
-        lhs.id == rhs.id
-    }
-}
-
 struct DashboardCanteenItemsView: View {
     
     @State
-    private var selectedIndex = 0 {
-        didSet {
-            withAnimation {
-                self.viewModel.selectedCanteenChange(newIndex: selectedIndex)
-            }
-        }
-    }
+    private var selectedIndex = 0
     let viewModel: DashboardCanteensRowViewModel
     
     var body: some View {
@@ -29,14 +14,22 @@ struct DashboardCanteenItemsView: View {
                 page: $selectedIndex,
                 data: viewModel.canteens,
                 content: {
-                    DashboardCanteenView(
-                        canteenName: "Menza JAK \($0.id)",
-                        canteenState: "Closed",
-                        canteenOpenHours: "10:00-12:00"
-                    )
-                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                    DashboardCanteenView(viewModel: $0)
+                        .padding(
+                            EdgeInsets(
+                                top: 0,
+                                leading: 4,
+                                bottom: 0,
+                                trailing: 4
+                            )
+                        )
                 }
             )
+            .onPageChanged({ index in
+                withAnimation {
+                    self.viewModel.selectedCanteenChange(newIndex: selectedIndex)
+                }
+            })
             .preferredItemSize(
                 CGSize(
                     width: UIScreen.main.bounds.width - 32,

@@ -48,6 +48,12 @@ struct DashboardSectionView: View {
 struct DashboardSectionView_Previews: PreviewProvider {
     
     static var previews: some View {
-        DashboardSectionView(dashboardSection: DashboardTasksSectionViewModel())
+        ScrollView(
+            .vertical,
+            showsIndicators: false,
+            content: {
+                DashboardSectionView(dashboardSection: DashboardFoodSectionViewModel())
+            }
+        )
     }
 }

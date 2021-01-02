@@ -2,18 +2,14 @@ import Foundation
 
 final class DashboardCanteensRowViewModel: DashboardRowViewModel {
     
-    var id: String
-    var canteens: [Canteen]
-    var onCanteenChange: (Canteen) -> Void
+    var id = UUID().uuidString
+    var canteens: [DashboardFoodCanteenViewModel]
+    var onCanteenChange: (DashboardFoodCanteenViewModel) -> Void
     
-    init(
-        id: String = UUID().uuidString,
-        canteens: [Canteen] = [Canteen(id: 1), Canteen(id: 2), Canteen(id: 3)],
-        onCanteenChange: @escaping (Canteen) -> Void
-    ) {
-        self.id = id
-        self.canteens = canteens
+    init(onCanteenChange: @escaping (DashboardFoodCanteenViewModel) -> Void) {
         self.onCanteenChange = onCanteenChange
+        canteens = (0 ..< 3)
+            .map { _ in DashboardFoodCanteenViewModel.generateRandomCanteen() }
     }
     
     func selectedCanteenChange(newIndex: Int) {

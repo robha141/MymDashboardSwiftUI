@@ -1,15 +1,17 @@
 import SwiftUI
+import Rswift
 
 struct DashboardCanteenView: View {
     
     let canteenName: String
     let canteenState: String
     let canteenOpenHours: String
+    let canteenImage: ImageResource
     
     var body: some View {
         ZStack(alignment: .leading) {
             GeometryReader { reader in
-                R.image.canteens_jak.image
+                canteenImage.image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(
@@ -48,14 +50,22 @@ extension DashboardCanteenView: HasCalculatedContentHeight {
     static var calculatedContentHeight: CGFloat { 210 }
 }
 
+extension DashboardCanteenView {
+    
+    init(viewModel: DashboardFoodCanteenViewModel) {
+        self.init(
+            canteenName: viewModel.name,
+            canteenState: viewModel.state,
+            canteenOpenHours: viewModel.openHours,
+            canteenImage: viewModel.image
+        )
+    }
+}
+
 struct DashboardCanteenView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardCanteenView(
-            canteenName: "Menza JAK",
-            canteenState: "Closed",
-            canteenOpenHours: "11:00-12:00"
-        )
-        .frame(height: 400)
-        .background(R.color.appBackground.color)
+        DashboardCanteenView(viewModel: .generateRandomCanteen())
+            .frame(height: 400)
+            .background(R.color.appBackground.color)
     }
 }

@@ -4,24 +4,17 @@ import Foundation
 final class DashboardFoodSectionViewModel: DashboardSectionViewModel {
     
     init() {
-        super.init(
-            items: [],
-            id: UUID().uuidString,
-            sectionName: "Food menu"
-        )
-        let canteens = DashboardCanteensRowViewModel { [weak self] _ in
-            self?.generateFoods()
+        super.init(sectionName: "Food menu")
+        let canteens = DashboardCanteensRowViewModel { [weak self] canteen in
+            self?.items.removeAll(where: { ($0 as? DashboardFoodRowViewModel) != nil })
+            self?.items.append(contentsOf: canteen.foods)
         }
-        items = [
-            canteens,
-            DashboardFoodRowViewModel.generateRandomFood(),
-            DashboardFoodRowViewModel.generateRandomFood(),
-            DashboardFoodRowViewModel.generateRandomFood()
-        ]
+        items = [canteens]
+        canteens.selectedCanteenChange(newIndex: 0)
     }
     
     private func generateFoods() {
         items.removeSubrange(1 ..< items.count)
-        items.append(contentsOf: (0 ..< Int.random(in: 1 ... 5)).map { _ in DashboardFoodRowViewModel.generateRandomFood() })
+        items.append(contentsOf: (0 ..< Int.random(in: 1 ... 10)).map { _ in DashboardFoodRowViewModel.generateRandomFood() })
     }
 }

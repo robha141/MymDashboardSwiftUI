@@ -21,6 +21,7 @@
 		597A802825A0999500812E9C /* DashboardTimetableEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A802725A0999500812E9C /* DashboardTimetableEventViewModel.swift */; };
 		597A802C25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A802B25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift */; };
 		597A803125A0CA8900812E9C /* DashboardTasksSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A803025A0CA8900812E9C /* DashboardTasksSectionViewModel.swift */; };
+		597A803425A0CE9F00812E9C /* DashboardFoodCanteenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A803325A0CE9F00812E9C /* DashboardFoodCanteenViewModel.swift */; };
 		59A942F2259B2463005207EA /* MymDashboardSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */; };
 		59A942F6259B2466005207EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A942F5259B2466005207EA /* Assets.xcassets */; };
 		59A942F9259B2466005207EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A942F8259B2466005207EA /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		597A802725A0999500812E9C /* DashboardTimetableEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventViewModel.swift; sourceTree = "<group>"; };
 		597A802B25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableSectionViewModel.swift; sourceTree = "<group>"; };
 		597A803025A0CA8900812E9C /* DashboardTasksSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTasksSectionViewModel.swift; sourceTree = "<group>"; };
+		597A803325A0CE9F00812E9C /* DashboardFoodCanteenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFoodCanteenViewModel.swift; sourceTree = "<group>"; };
 		59A942EE259B2463005207EA /* MymDashboardSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MymDashboardSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MymDashboardSwiftUIApp.swift; sourceTree = "<group>"; };
 		59A942F5259B2466005207EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				59704046259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift */,
 				5970405125A08F49005A98F6 /* DashboardFoodRowViewModel.swift */,
 				5970405425A08F69005A98F6 /* DashboardCanteensRowViewModel.swift */,
+				597A803325A0CE9F00812E9C /* DashboardFoodCanteenViewModel.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				597A803125A0CA8900812E9C /* DashboardTasksSectionViewModel.swift in Sources */,
 				59067B5425A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift in Sources */,
 				5970402A259DE169005A98F6 /* EdgeInsets+Consntats.swift in Sources */,
+				597A803425A0CE9F00812E9C /* DashboardFoodCanteenViewModel.swift in Sources */,
 				5970404A25A08ED6005A98F6 /* DashboardSectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
