@@ -1,4 +1,4 @@
-enum FoodRating {
+enum FoodRating: Int, CaseIterable {
     
     case good
     case neutral

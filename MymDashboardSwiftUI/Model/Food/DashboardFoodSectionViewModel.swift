@@ -14,14 +14,14 @@ final class DashboardFoodSectionViewModel: DashboardSectionViewModel {
         }
         items = [
             canteens,
-            DashboardFoodRowViewModel(),
-            DashboardFoodRowViewModel(),
-            DashboardFoodRowViewModel()
+            DashboardFoodRowViewModel.generateRandomFood(),
+            DashboardFoodRowViewModel.generateRandomFood(),
+            DashboardFoodRowViewModel.generateRandomFood()
         ]
     }
     
     private func generateFoods() {
         items.removeSubrange(1 ..< items.count)
-        items.append(contentsOf: (0 ..< Int.random(in: 1 ... 5)).map { _ in DashboardFoodRowViewModel() })
+        items.append(contentsOf: (0 ..< Int.random(in: 1 ... 5)).map { _ in DashboardFoodRowViewModel.generateRandomFood() })
     }
 }

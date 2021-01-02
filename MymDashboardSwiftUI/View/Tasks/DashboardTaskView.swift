@@ -91,16 +91,23 @@ private struct TaskBottomItemView: View {
     }
 }
 
+extension DashboardTaskView {
+    
+    init(viewModel: DashboardTaskRowViewModel) {
+        self.init(
+            isDone: viewModel.isDone,
+            taskTitle: viewModel.taskTitle,
+            time: viewModel.time,
+            place: viewModel.place
+        )
+    }
+}
+
 struct DashboardTaskView_Previews: PreviewProvider {
     
     static var previews: some View {
-        DashboardTaskView(
-            isDone: false,
-            taskTitle: "Test",
-            time: "123",
-            place: "123"
-        )
-        .frame(height: 300)
-        .background(R.color.appBackground.color)
+        DashboardTaskView(viewModel: .generateRandomTask())
+            .frame(height: 300)
+            .background(R.color.appBackground.color)
     }
 }

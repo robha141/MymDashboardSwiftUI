@@ -59,16 +59,23 @@ private extension FoodRating {
     }
 }
 
+extension DashboardFoodView {
+    
+    init(viewModel: DashboardFoodRowViewModel) {
+        self.init(
+            foodName: viewModel.foodName,
+            foodPrice: viewModel.foodPrice,
+            foodImage: viewModel.foodImage,
+            rating: viewModel.rating
+        )
+    }
+}
+
 struct DashboardFoodView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardFoodView(
-            foodName: "Chonk",
-            foodPrice: "30 Kč",
-            foodImage: R.image.soup24px,
-            rating: .bad
-        )
-        .frame(height: 300)
-        .background(R.color.appBackground.color)
-        .colorScheme(.dark)
+        DashboardFoodView(viewModel: DashboardFoodRowViewModel.generateRandomFood())
+            .frame(height: 300)
+            .background(R.color.appBackground.color)
+            .colorScheme(.dark)
     }
 }
