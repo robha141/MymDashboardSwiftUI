@@ -13,15 +13,21 @@ struct Canteen: Identifiable, Equatable {
 struct DashboardCanteenItemsView: View {
     
     @State
-    private var page = 0
-    var items = (0 ..< 10).map { Canteen(id: $0) }
+    private var selectedIndex = 0 {
+        didSet {
+            withAnimation {
+                self.viewModel.selectedCanteenChange(newIndex: selectedIndex)
+            }
+        }
+    }
+    let viewModel: DashboardCanteensRowViewModel
     
     var body: some View {
         let contentHeight = DashboardCanteenView.calculatedContentHeight
         return VStack {
             Pager(
-                page: $page,
-                data: items,
+                page: $selectedIndex,
+                data: viewModel.canteens,
                 content: {
                     DashboardCanteenView(
                         canteenName: "Menza JAK \($0.id)",
@@ -40,16 +46,17 @@ struct DashboardCanteenItemsView: View {
             )
             .frame(height: contentHeight)
             PageControl(
-                selectedIndex: $page,
-                numberOfItems: items.count
+                selectedIndex: $selectedIndex,
+                numberOfItems: viewModel.canteens.count
             )
-            .padding(.top, .kPaddingS)
+            .padding(EdgeInsets(top: .kPaddingS, leading: 0, bottom: .kPaddingS, trailing: 0))
         }
     }
 }
 
 struct DashboardCanteenItemsView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        DashboardCanteenItemsView()
+        DashboardCanteenItemsView(viewModel: DashboardCanteensRowViewModel(onCanteenChange: { _ in }))
     }
 }

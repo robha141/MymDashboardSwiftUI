@@ -34,7 +34,6 @@ struct DashboardFoodView: View {
             Spacer()
             rating.image
                 .frame(size: .kCardLeadingIconSize)
-                .background(R.color.roundedIconSecondaryBcg.color)
                 .clipShape(Circle())
         }
         .cardStyle()
@@ -70,5 +69,6 @@ struct DashboardFoodView_Previews: PreviewProvider {
         )
         .frame(height: 300)
         .background(R.color.appBackground.color)
+        .colorScheme(.dark)
     }
 }

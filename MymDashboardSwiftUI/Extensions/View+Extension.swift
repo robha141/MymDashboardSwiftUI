@@ -7,6 +7,10 @@ extension View {
     }
     
     func cardShadow() -> some View {
-        self.shadow(color: R.color.cardShadow.color.opacity(0.1), radius: 5)
+        self.shadow(color: R.color.cardShadow.color.opacity(0.5), radius: 10)
+    }
+    
+    func asAnyView() -> AnyView {
+        AnyView(self)
     }
 }

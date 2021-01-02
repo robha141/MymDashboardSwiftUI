@@ -52,7 +52,7 @@ struct DashboardTaskView: View {
     
     private func createBottomItemsViews() -> some View {
         if time != nil || place != nil {
-            let bottomItems = HStack {
+            return HStack {
                 if let time = time {
                     TaskBottomItemView(
                         image: R.image.time24px,
@@ -66,9 +66,9 @@ struct DashboardTaskView: View {
                     )
                 }
             }
-            return AnyView(bottomItems)
+            .asAnyView()
         } else {
-            return AnyView(EmptyView())
+            return EmptyView().asAnyView()
         }
     }
 }

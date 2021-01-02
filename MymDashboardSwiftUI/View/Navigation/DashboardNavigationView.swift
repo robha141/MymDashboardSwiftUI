@@ -22,6 +22,16 @@ struct DashboardNavigationView: View {
     }
 }
 
+extension DashboardNavigationView {
+    
+    init(navigationItem: DashboardNavigationItem) {
+        self.init(
+            text: navigationItem.title,
+            icon: navigationItem.image
+        )
+    }
+}
+
 struct DashboardNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

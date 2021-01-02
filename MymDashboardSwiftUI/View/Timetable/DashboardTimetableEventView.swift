@@ -9,8 +9,6 @@ struct DashboardTimetableEventView: View {
     let eventProgress: Double
     let eventIcon: ImageResource
     
-    // MARK: - View
-    
     var body: some View {
         VStack {
             creteContentView()
@@ -65,17 +63,24 @@ extension DashboardTimetableEventView: HasCalculatedContentWidth {
     static var calculatedContentWidth: CGFloat { 285 }
 }
 
+extension DashboardTimetableEventView {
+    
+    init(viewModel: DashboardTimetableEventViewModel) {
+        self.init(
+            eventName: viewModel.eventName,
+            eventPlaceName: viewModel.eventPlaceName,
+            eventTime: viewModel.eventTime,
+            eventProgress: viewModel.eventProgress,
+            eventIcon: viewModel.eventIcon
+        )
+    }
+}
+
 struct DashboardTimetableEventView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardTimetableEventView(
-            eventName: "Computer Graphics 2",
-            eventPlaceName: "Q02",
-            eventTime: "10:00 - 12:00",
-            eventProgress: 0.5,
-            eventIcon: R.image.timetable_other24px
-        )
-        .frame(height: 400)
-        .padding(20)
-        .background(R.color.appBackground.color)
+        DashboardTimetableEventView(viewModel: .generateRandomEvent())
+            .frame(height: 400)
+            .padding(20)
+            .background(R.color.appBackground.color)
     }
 }

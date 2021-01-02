@@ -32,39 +32,15 @@ struct DashboardPlaceholderView: View {
     }
 }
 
-// MARK: - Default placeholders
+// MARK: - Dashboard placeholder view init
 
 extension DashboardPlaceholderView {
     
-    static var createEventPlaceholder: DashboardPlaceholderView {
-        DashboardPlaceholderView(
-            titleText: "Create an event",
-            bottomText: "Download the available timetable or schedule an event.",
-            backgroundImage: R.image.create_events
-        )
-    }
-    
-    static var noEventsTodayPlaceholder: DashboardPlaceholderView {
-        DashboardPlaceholderView(
-            titleText: "No further events",
-            bottomText: "There are no events to attend today. Just relax.",
-            backgroundImage: R.image.no_events_today
-        )
-    }
-    
-    static var noEventsLeftPlaceholder: DashboardPlaceholderView {
-        DashboardPlaceholderView(
-            titleText: "No events left",
-            bottomText: "There are no scheduled events left. Take a rest.",
-            backgroundImage: R.image.no_events_left
-        )
-    }
-    
-    static var noTasksPlaceholder: DashboardPlaceholderView {
-        DashboardPlaceholderView(
-            titleText: "No tasks",
-            bottomText: "All tasks accomplished!",
-            backgroundImage: R.image.tasks
+    init(from item: DashboardPlaceholderItem) {
+        self.init(
+            titleText: item.titleText,
+            bottomText: item.bottomText,
+            backgroundImage: item.image
         )
     }
 }
@@ -73,7 +49,7 @@ extension DashboardPlaceholderView {
 
 struct DashboardPlaceholderView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardPlaceholderView.noEventsLeftPlaceholder
+        DashboardPlaceholderView(from: .createEvent)
             .frame(height: 400)
             .background(R.color.appBackground.color)
     }

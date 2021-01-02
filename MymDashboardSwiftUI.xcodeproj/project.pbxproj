@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59067B5025A0901D00A5C34A /* DashboardPlaceholderRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59067B4F25A0901D00A5C34A /* DashboardPlaceholderRowViewModel.swift */; };
+		59067B5425A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59067B5325A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift */; };
+		590C377225A0947B00B71539 /* DashboardNavigationItemsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590C377125A0947B00B71539 /* DashboardNavigationItemsRowViewModel.swift */; };
+		5970402A259DE169005A98F6 /* EdgeInsets+Consntats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59704029259DE169005A98F6 /* EdgeInsets+Consntats.swift */; };
+		59704041259FC618005A98F6 /* AnyTransition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59704040259FC618005A98F6 /* AnyTransition+Extension.swift */; };
+		59704044259FCA20005A98F6 /* DashboardSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59704043259FCA20005A98F6 /* DashboardSectionView.swift */; };
+		59704047259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59704046259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift */; };
+		5970404A25A08ED6005A98F6 /* DashboardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970404925A08ED6005A98F6 /* DashboardSectionViewModel.swift */; };
+		5970404D25A08F02005A98F6 /* DashboardRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970404C25A08F02005A98F6 /* DashboardRowViewModel.swift */; };
+		5970405225A08F49005A98F6 /* DashboardFoodRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970405125A08F49005A98F6 /* DashboardFoodRowViewModel.swift */; };
+		5970405525A08F69005A98F6 /* DashboardCanteensRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970405425A08F69005A98F6 /* DashboardCanteensRowViewModel.swift */; };
+		597A802825A0999500812E9C /* DashboardTimetableEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A802725A0999500812E9C /* DashboardTimetableEventViewModel.swift */; };
+		597A802C25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A802B25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift */; };
 		59A942F2259B2463005207EA /* MymDashboardSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */; };
 		59A942F6259B2466005207EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A942F5259B2466005207EA /* Assets.xcassets */; };
 		59A942F9259B2466005207EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A942F8259B2466005207EA /* Preview Assets.xcassets */; };
@@ -19,23 +32,39 @@
 		59A9438E259B7F3F005207EA /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9438D259B7F3F005207EA /* CGFloat+Constants.swift */; };
 		59A94398259B818D005207EA /* DashboardNavigationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A94397259B818D005207EA /* DashboardNavigationListView.swift */; };
 		59ABC7F4259C67E8005070A0 /* HasCalculatedContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC7F3259C67E8005070A0 /* HasCalculatedContentWidth.swift */; };
-		59ABC7FB259C69BE005070A0 /* DashboardTimetableEventItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC7FA259C69BE005070A0 /* DashboardTimetableEventItemsView.swift */; };
+		59ABC7FB259C69BE005070A0 /* DashboardTimetableEventsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC7FA259C69BE005070A0 /* DashboardTimetableEventsRowView.swift */; };
 		59ABC804259C70E4005070A0 /* DashboardTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC803259C70E4005070A0 /* DashboardTaskView.swift */; };
 		59ABC808259C7C80005070A0 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC807259C7C80005070A0 /* CardViewModifier.swift */; };
 		59ABC814259C8BC2005070A0 /* DashboardFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC813259C8BC2005070A0 /* DashboardFoodView.swift */; };
 		59ABC81B259C8D3C005070A0 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC81A259C8D3C005070A0 /* View+Extension.swift */; };
 		59ABC820259C9785005070A0 /* FoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC81F259C9785005070A0 /* FoodRating.swift */; };
+		59ABC825259C9F89005070A0 /* DashboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC824259C9F89005070A0 /* DashboardData.swift */; };
 		59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */; };
 		59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */; };
 		59B7BBBD259B994000AB1975 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7BBBC259B994000AB1975 /* SwiftUIPager */; };
 		59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */; };
 		59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBC6259BB74200AB1975 /* PageControl.swift */; };
 		59B7BBCB259BBCB500AB1975 /* DashboardTimetableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */; };
+		59F165A725A094ED005BF3A0 /* DashboardNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F165A625A094ED005BF3A0 /* DashboardNavigationItem.swift */; };
+		59F165AA25A0974B005BF3A0 /* DashboardTaskRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F165A925A0974B005BF3A0 /* DashboardTaskRowViewModel.swift */; };
 		5A2293B1B13423530AC88CF2 /* Pods_MymDashboardSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4ED63EA345911B2B03F7622A /* Pods-MymDashboardSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MymDashboardSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MymDashboardSwiftUI/Pods-MymDashboardSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		59067B4F25A0901D00A5C34A /* DashboardPlaceholderRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPlaceholderRowViewModel.swift; sourceTree = "<group>"; };
+		59067B5325A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventsRowViewModel.swift; sourceTree = "<group>"; };
+		590C377125A0947B00B71539 /* DashboardNavigationItemsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationItemsRowViewModel.swift; sourceTree = "<group>"; };
+		59704029259DE169005A98F6 /* EdgeInsets+Consntats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Consntats.swift"; sourceTree = "<group>"; };
+		59704040259FC618005A98F6 /* AnyTransition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extension.swift"; sourceTree = "<group>"; };
+		59704043259FCA20005A98F6 /* DashboardSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionView.swift; sourceTree = "<group>"; };
+		59704046259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFoodSectionViewModel.swift; sourceTree = "<group>"; };
+		5970404925A08ED6005A98F6 /* DashboardSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionViewModel.swift; sourceTree = "<group>"; };
+		5970404C25A08F02005A98F6 /* DashboardRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRowViewModel.swift; sourceTree = "<group>"; };
+		5970405125A08F49005A98F6 /* DashboardFoodRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFoodRowViewModel.swift; sourceTree = "<group>"; };
+		5970405425A08F69005A98F6 /* DashboardCanteensRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteensRowViewModel.swift; sourceTree = "<group>"; };
+		597A802725A0999500812E9C /* DashboardTimetableEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventViewModel.swift; sourceTree = "<group>"; };
+		597A802B25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableSectionViewModel.swift; sourceTree = "<group>"; };
 		59A942EE259B2463005207EA /* MymDashboardSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MymDashboardSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MymDashboardSwiftUIApp.swift; sourceTree = "<group>"; };
 		59A942F5259B2466005207EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,17 +79,20 @@
 		59A9438D259B7F3F005207EA /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
 		59A94397259B818D005207EA /* DashboardNavigationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationListView.swift; sourceTree = "<group>"; };
 		59ABC7F3259C67E8005070A0 /* HasCalculatedContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentWidth.swift; sourceTree = "<group>"; };
-		59ABC7FA259C69BE005070A0 /* DashboardTimetableEventItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventItemsView.swift; sourceTree = "<group>"; };
+		59ABC7FA259C69BE005070A0 /* DashboardTimetableEventsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventsRowView.swift; sourceTree = "<group>"; };
 		59ABC803259C70E4005070A0 /* DashboardTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTaskView.swift; sourceTree = "<group>"; };
 		59ABC807259C7C80005070A0 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 		59ABC813259C8BC2005070A0 /* DashboardFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFoodView.swift; sourceTree = "<group>"; };
 		59ABC81A259C8D3C005070A0 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		59ABC81F259C9785005070A0 /* FoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRating.swift; sourceTree = "<group>"; };
+		59ABC824259C9F89005070A0 /* DashboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardData.swift; sourceTree = "<group>"; };
 		59B7BBB4259B922C00AB1975 /* DashboardCanteenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenView.swift; sourceTree = "<group>"; };
 		59B7BBB8259B985400AB1975 /* DashboardCanteenItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCanteenItemsView.swift; sourceTree = "<group>"; };
 		59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCalculatedContentHeight.swift; sourceTree = "<group>"; };
 		59B7BBC6259BB74200AB1975 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTimetableEventView.swift; sourceTree = "<group>"; };
+		59F165A625A094ED005BF3A0 /* DashboardNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationItem.swift; sourceTree = "<group>"; };
+		59F165A925A0974B005BF3A0 /* DashboardTaskRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTaskRowViewModel.swift; sourceTree = "<group>"; };
 		781A7628F35340001D38F8D4 /* Pods-MymDashboardSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MymDashboardSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MymDashboardSwiftUI/Pods-MymDashboardSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C6F0A0AC672E1BD3C00803 /* Pods_MymDashboardSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MymDashboardSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +110,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590C377525A0947E00B71539 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				590C377125A0947B00B71539 /* DashboardNavigationItemsRowViewModel.swift */,
+				59F165A625A094ED005BF3A0 /* DashboardNavigationItem.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		5970405025A08F0F005A98F6 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				59ABC81F259C9785005070A0 /* FoodRating.swift */,
+				59704046259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift */,
+				5970405125A08F49005A98F6 /* DashboardFoodRowViewModel.swift */,
+				5970405425A08F69005A98F6 /* DashboardCanteensRowViewModel.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		597A802525A0993C00812E9C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59A9436B259B2843005207EA /* RSwift+SwiftUI.swift */,
+				59ABC81A259C8D3C005070A0 /* View+Extension.swift */,
+				59704040259FC618005A98F6 /* AnyTransition+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		59A942E5259B2463005207EA = {
 			isa = PBXGroup;
 			children = (
@@ -99,17 +161,17 @@
 		59A942F0259B2463005207EA /* MymDashboardSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				597A802525A0993C00812E9C /* Extensions */,
 				59ABC81E259C977B005070A0 /* Model */,
 				59A9438C259B7F15005207EA /* Constants */,
 				59A94351259B2532005207EA /* View */,
 				59A942F1259B2463005207EA /* MymDashboardSwiftUIApp.swift */,
 				59A94368259B27A7005207EA /* R.generated.swift */,
-				59A9436B259B2843005207EA /* RSwift+SwiftUI.swift */,
 				59A942F5259B2466005207EA /* Assets.xcassets */,
 				59A942FA259B2466005207EA /* Info.plist */,
-				59A942F7259B2466005207EA /* Preview Content */,
 				59B7BBBF259BB63200AB1975 /* HasCalculatedContentHeight.swift */,
 				59ABC7F3259C67E8005070A0 /* HasCalculatedContentWidth.swift */,
+				59A942F7259B2466005207EA /* Preview Content */,
 			);
 			path = MymDashboardSwiftUI;
 			sourceTree = "<group>";
@@ -133,6 +195,7 @@
 				59A94382259B3523005207EA /* DashboardView.swift */,
 				59A94386259B79BB005207EA /* DashboardHeaderView.swift */,
 				59A94389259B7ED0005207EA /* DashboardPlaceholderView.swift */,
+				59704043259FCA20005A98F6 /* DashboardSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				59A9438D259B7F3F005207EA /* CGFloat+Constants.swift */,
+				59704029259DE169005A98F6 /* EdgeInsets+Consntats.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -167,7 +231,6 @@
 			children = (
 				59B7BBC6259BB74200AB1975 /* PageControl.swift */,
 				59ABC807259C7C80005070A0 /* CardViewModifier.swift */,
-				59ABC81A259C8D3C005070A0 /* View+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -175,7 +238,14 @@
 		59ABC81E259C977B005070A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				59ABC81F259C9785005070A0 /* FoodRating.swift */,
+				59F165AD25A09764005BF3A0 /* Timetable */,
+				59F165AC25A0975A005BF3A0 /* Tasks */,
+				590C377525A0947E00B71539 /* Navigation */,
+				5970405025A08F0F005A98F6 /* Food */,
+				59ABC824259C9F89005070A0 /* DashboardData.swift */,
+				5970404925A08ED6005A98F6 /* DashboardSectionViewModel.swift */,
+				5970404C25A08F02005A98F6 /* DashboardRowViewModel.swift */,
+				59067B4F25A0901D00A5C34A /* DashboardPlaceholderRowViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,7 +264,25 @@
 			isa = PBXGroup;
 			children = (
 				59B7BBCA259BBCB500AB1975 /* DashboardTimetableEventView.swift */,
-				59ABC7FA259C69BE005070A0 /* DashboardTimetableEventItemsView.swift */,
+				59ABC7FA259C69BE005070A0 /* DashboardTimetableEventsRowView.swift */,
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
+		59F165AC25A0975A005BF3A0 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				59F165A925A0974B005BF3A0 /* DashboardTaskRowViewModel.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		59F165AD25A09764005BF3A0 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				59067B5325A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift */,
+				597A802725A0999500812E9C /* DashboardTimetableEventViewModel.swift */,
+				597A802B25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
@@ -358,26 +446,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				59A94383259B3523005207EA /* DashboardView.swift in Sources */,
+				59067B5025A0901D00A5C34A /* DashboardPlaceholderRowViewModel.swift in Sources */,
+				597A802825A0999500812E9C /* DashboardTimetableEventViewModel.swift in Sources */,
 				59A9438A259B7ED0005207EA /* DashboardPlaceholderView.swift in Sources */,
 				59B7BBC0259BB63200AB1975 /* HasCalculatedContentHeight.swift in Sources */,
 				59ABC808259C7C80005070A0 /* CardViewModifier.swift in Sources */,
+				59ABC825259C9F89005070A0 /* DashboardData.swift in Sources */,
 				59B7BBC7259BB74200AB1975 /* PageControl.swift in Sources */,
 				59ABC814259C8BC2005070A0 /* DashboardFoodView.swift in Sources */,
+				5970405525A08F69005A98F6 /* DashboardCanteensRowViewModel.swift in Sources */,
+				590C377225A0947B00B71539 /* DashboardNavigationItemsRowViewModel.swift in Sources */,
 				59A94398259B818D005207EA /* DashboardNavigationListView.swift in Sources */,
+				59704047259FCCC4005A98F6 /* DashboardFoodSectionViewModel.swift in Sources */,
 				59ABC820259C9785005070A0 /* FoodRating.swift in Sources */,
 				59A9438E259B7F3F005207EA /* CGFloat+Constants.swift in Sources */,
 				59B7BBB5259B922C00AB1975 /* DashboardCanteenView.swift in Sources */,
+				59F165AA25A0974B005BF3A0 /* DashboardTaskRowViewModel.swift in Sources */,
 				59A94353259B253C005207EA /* DashboardNavigationView.swift in Sources */,
 				59B7BBB9259B985400AB1975 /* DashboardCanteenItemsView.swift in Sources */,
+				597A802C25A09EDD00812E9C /* DashboardTimetableSectionViewModel.swift in Sources */,
 				59A942F2259B2463005207EA /* MymDashboardSwiftUIApp.swift in Sources */,
 				59B7BBCB259BBCB500AB1975 /* DashboardTimetableEventView.swift in Sources */,
+				59F165A725A094ED005BF3A0 /* DashboardNavigationItem.swift in Sources */,
 				59ABC804259C70E4005070A0 /* DashboardTaskView.swift in Sources */,
 				59ABC7F4259C67E8005070A0 /* HasCalculatedContentWidth.swift in Sources */,
+				5970404D25A08F02005A98F6 /* DashboardRowViewModel.swift in Sources */,
 				59A9436C259B2843005207EA /* RSwift+SwiftUI.swift in Sources */,
+				59704044259FCA20005A98F6 /* DashboardSectionView.swift in Sources */,
 				59A94387259B79BB005207EA /* DashboardHeaderView.swift in Sources */,
+				59704041259FC618005A98F6 /* AnyTransition+Extension.swift in Sources */,
 				59A94369259B27A7005207EA /* R.generated.swift in Sources */,
+				5970405225A08F49005A98F6 /* DashboardFoodRowViewModel.swift in Sources */,
 				59ABC81B259C8D3C005070A0 /* View+Extension.swift in Sources */,
-				59ABC7FB259C69BE005070A0 /* DashboardTimetableEventItemsView.swift in Sources */,
+				59ABC7FB259C69BE005070A0 /* DashboardTimetableEventsRowView.swift in Sources */,
+				59067B5425A0905500A5C34A /* DashboardTimetableEventsRowViewModel.swift in Sources */,
+				5970402A259DE169005A98F6 /* EdgeInsets+Consntats.swift in Sources */,
+				5970404A25A08ED6005A98F6 /* DashboardSectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

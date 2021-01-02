@@ -20,9 +20,9 @@ struct CardViewModifier: ViewModifier {
             .background(backgroundColor)
             .cornerRadius(cornerRadius)
         if hasShadow {
-            return AnyView(newContent.cardShadow())
+            return newContent.cardShadow().asAnyView()
         } else {
-            return AnyView(newContent)
+            return newContent.asAnyView()
         }
     }
 }
